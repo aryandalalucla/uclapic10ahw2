@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  hw2_q5
+//  hw2_q1
 //
-//  Created by Aryan Dalal on 10/17/24.
+//  Created by Aryan Dalal on 10/16/24.
 //
 
 #include <iostream>
@@ -11,29 +11,20 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    const int terminate = 0;
-    int shapenumber;
+    int inpinteger;
+    cout << "Please enter an integer between 9 and 12: ";
+    cin >> inpinteger;
     
-    cout << "This is a game to daw shapes, please enter a number: ";
-    cin >> shapenumber;
-    
-    while (shapenumber != terminate) {
-        for (int i = 1; i <= shapenumber; i++) {
-            if (shapenumber % 2 == 0) {
-                for (int j = 1; j <= shapenumber; j++) {
-                    cout << "* ";
-                }
-                cout << endl;
-            }
-            else if (shapenumber % 2 != 0) {
-                for (int w = 1; w <= i; w++) {
-                    cout << "* ";
-                }
-                cout << endl;
-            }
-        }
-        cout << "continue: ";
-        cin >> shapenumber;
+    if (inpinteger >= 9 && inpinteger <= 12) {
+        string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        
+        cout << "The corresponding month is: " << months[inpinteger-1] << endl;
     }
+    
+    else {
+        cout << "Invalid Input." << endl;
+    }
+    
+    
     return 0;
 }
